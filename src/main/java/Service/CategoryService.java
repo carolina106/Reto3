@@ -24,6 +24,9 @@ public class CategoryService {
 
     public Category save(Category category){
         if(category.getId()==null){
+            if(category.getName().length()<=45 && category.getDescription().length()<=250){
+                return categoryRepository.save(category);
+            }
             return categoryRepository.save(category);
         }else{
             Optional<Category> categoryEncontrada = categoryRepository.getCategory(category.getId());

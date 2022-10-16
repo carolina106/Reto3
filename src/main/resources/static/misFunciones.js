@@ -1,6 +1,6 @@
 function traerDatosCategoria(){
     $.ajax({
-        url:"http://150.136.56.226/api/Category/all",
+        url:"http://150.136.56.226:8080/api/Category/all",
         type: "GET",
         dataType: "json",
         success: function(respuesta){
